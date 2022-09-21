@@ -1,0 +1,119 @@
+*{
+    padding: 0%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.img-menu{
+    display: none;
+}
+
+/* styling the main-nav (parent-nav) section */
+
+.main-nav{
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.phone-menu-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-grp-btn{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* styling the nav-features elements */
+
+ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 10px;
+    font-size: 18px;
+    color: hsl(257, 27%, 26%);
+}
+
+/* styling the login-btn */
+
+.login-btn{
+    font-size: 18px;
+    color: hsl(0, 0%, 75%);
+}
+.login-btn:hover{
+    font-weight: bolder;
+    cursor: pointer;
+    border-bottom: 2px solid hsl(180, 66%, 49%);
+}
+
+/* styling the sign-up btn */
+
+.signup-btn{
+    width: 5em;
+    border-radius: 25px;
+    border-color:hsl(180, 66%, 49%);
+    font-size: 18px;
+    color: hsl(0, 0%, 100%);
+    background-color:hsl(180, 66%, 49%);
+}
+
+/* styling the phone-menu-bar for media responsiveness */
+
+@media screen and (max-width:700px) {
+    .img-menu{
+        display: block;
+    }
+
+    #phone-menu-bar{
+        display: none; 
+    }
+
+    #handleMenuBar{
+        position: absolute;
+        border-radius: 25px;
+        margin: 5%;
+        width: 100%;
+        height: auto;
+        right: 0%;
+        top: 5%;
+        background-color: hsl(257, 27%, 26%);
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    ul li{
+        display: block;
+        font-size: 18px;
+        color: hsl(0, 0%, 100%);
+    }
+ 
+    .nav-grp-btn{
+        border-top: 1px solid hsl(260, 8%, 14%);
+        margin-top: 10px;
+        width:100%;
+        display: flex;
+        flex-direction: column; 
+    } 
+
+    .login-btn{
+        color: hsl(0, 0%, 100%);
+        margin-top: 10px;
+        margin-bottom: 20px;
+        width: 50%;
+    }
+
+    .signup-btn{
+        width: 50%;
+    }
+}

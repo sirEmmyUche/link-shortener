@@ -1,0 +1,64 @@
+/* styling the main section */
+*{
+    box-sizing: border-box;
+}
+
+section{
+    margin: 5%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.box,.img-box{
+    width: 50%;
+}
+
+h1{ border: 1px;
+    width: 50%;
+    font-size: 3vmax;
+    color: hsl(260, 8%, 14%);
+    margin: 5% 0;
+}
+
+p{
+    font-size: 18px;
+    width: 50%;
+    color: hsl(257, 7%, 63%);
+    opacity: 70;
+    margin-bottom: 5%;
+}
+/* stylinhg the section button */
+
+.sec-btn>button{
+    width: 20%;
+    height: 20%;
+    background-color: hsl(180, 66%, 49%);
+    border-radius: 25px;
+    border: 1px solid hsl(180, 66%, 49%);
+    color: hsl(0, 0%, 100%);
+}
+
+/* phone responsivenes */
+@media screen and (max-width: 700px){
+    section{
+        display: grid;
+        place-content: center;
+        justify-items: center;
+        grid-template-columns:1fr;
+    }
+
+    .img-box{
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .box{
+        grid-column: 1;
+        grid-row: 2; 
+    }
+    h1,p{
+        width: 100%;
+    }
+    .sec-btn>button{
+        width: 50%;
+    }
+}

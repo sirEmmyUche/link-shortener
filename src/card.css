@@ -1,0 +1,36 @@
+/* .card--wraper h3, p{
+    border: 1px solid yellow;
+    width: 100%;
+    margin: 1rem;
+} */
+
+
+.card{
+    border: 1px solid outset;
+    box-shadow: 0, 0, 10px #fff;
+    width: 25em;
+    background-color: hsl(0, 0%, 100%);
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    flex-direction: column;
+
+}
+
+.card--component{
+    padding-top: 5%;
+    background-color:hsl(257, 7%, 90%);
+    display: flex;
+    justify-content: space-around;
+}
+
+
+@media only screen and (max-width: 700px) {
+    .card--component{
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
