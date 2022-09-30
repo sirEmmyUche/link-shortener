@@ -9,8 +9,12 @@ section{
     justify-content: space-around;
 }
 
-.box,.img-box{
+.box{
     width: 50%;
+}
+
+.img-box{
+    width: 25%;
 }
 
 h1{ border: 1px;

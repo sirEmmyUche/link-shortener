@@ -14,7 +14,7 @@ function Section(){
                     <div className="sec-btn"><button>{'Get Started'}</button></div>
              </div>
              <div className="img-box">
-                <img src="/images/illustration-working.svg" alt="workstation"/>
+                <img src="/images/workstation.jpg" alt="workstation"/>
              </div>
     </section>
     )

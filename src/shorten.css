@@ -15,7 +15,6 @@ input{
 }
 
 .short-background{
-    background-image:url('');
     background-position: center;
     background-size: 100% 100%;
     border: 1px solid red;
