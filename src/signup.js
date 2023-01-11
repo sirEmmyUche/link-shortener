@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-
 function SignUp({homepage}){
 
 const[signUpData, setSignUpData] = useState({
@@ -12,7 +11,7 @@ const[signUpData, setSignUpData] = useState({
 
 const sendToAPI = async()=>{
         //dont delete this code......
-    await fetch('http://localhost:3000/signup', {
+    const signup = await fetch('http://localhost:3000/signup', {
       method: 'post',
       headers: {'content-type':'application/json'},
       body: JSON.stringify({
@@ -22,6 +21,8 @@ const sendToAPI = async()=>{
         password: signUpData.password,
       })  
     })
+    const response = await signup.json()
+    console.log(response)
 }
 
 const handleSignUpData = (event)=>{
@@ -91,4 +92,4 @@ const handleOnSubmitSignup = (event)=>{
 }
 
 
-export {SignUp}
+export {SignUp} 

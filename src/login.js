@@ -20,7 +20,7 @@ function LogIn({homepage, signUpPage}){
 
 const sendToAPI = async()=>{
         //dont delete this code......
-    await fetch('http://localhost:3000/login', {
+   const loginUser = await fetch('http://localhost:3000/login', {
       method: 'post',
       headers: {'content-type':'application/json'},
       body: JSON.stringify({
@@ -28,7 +28,8 @@ const sendToAPI = async()=>{
         password: logInData.password,
       })  
     })
-  
+    const response = await loginUser.json()
+    console.log(response)
 }
 
     const handleSubmit = (event)=>{

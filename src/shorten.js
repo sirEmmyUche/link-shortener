@@ -15,7 +15,7 @@ function Shortening(){
         if(inputValue === ''){
             alert('Please Enter a Link')
         }else{
-            const getFetch = await fetch("https://link-shortener-api-xjtd.vercel.app//shorten", {
+            const getFetch = await fetch('http://localhost:3000/shorten', {
                 method: 'post',
                 headers: {'content-type': 'application/json'},
                 body: JSON.stringify({
@@ -29,10 +29,12 @@ function Shortening(){
     fetchData();
 }, [inputValue])
 
-    const copyToClipboard = async ()=>{
-        let text = shortUrl.shortLink;
-    //    await navigator.clipboard.writeText(text)
-       console.log(text)
+    const copyToClipboard = ()=>{
+        if(inputValue===""){
+            console.log("Text field is empty")
+        }else{
+            navigator.clipboard.writeText(shortUrl)
+        }
     }
 
     return(

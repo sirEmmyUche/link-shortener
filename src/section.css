@@ -52,6 +52,7 @@ p{
     }
 
     .img-box{
+        width: 50%;
         grid-column: 1;
         grid-row: 1;
     }
