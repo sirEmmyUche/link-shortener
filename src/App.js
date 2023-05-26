@@ -30,7 +30,8 @@ function App() {
        {homePage === false && <LogIn homepage={handleHomePage} signUpPage={handleSignUpPage}/> } 
        {homePage === !false && <div>
         <Nav homepage={handleHomePage} signUpPage={handleSignUpPage}/>
-        <Main/></div> }
+        <Main/>
+        </div> }
        </userContext.Provider> 
        
     </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Shortening } from './shorten';
 import Section from './section';
-import { CardList } from './cardList';
+// import { CardList } from './cardList';
 
 
 
@@ -11,7 +11,7 @@ function Main (){
             <div>
                 <Section/>
                 <Shortening/>
-                <CardList/>  
+                {/* <CardList/>   */}
             </div>
         </main>
     )

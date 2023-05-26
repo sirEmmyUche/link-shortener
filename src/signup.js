@@ -11,7 +11,7 @@ const[signUpData, setSignUpData] = useState({
 
 const sendToAPI = async()=>{
         //dont delete this code......
-    const signup = await fetch('http://localhost:3000/signup', {
+    const signup = await fetch('https://shortit-etr8.onrender.com/signup', {
       method: 'post',
       headers: {'content-type':'application/json'},
       body: JSON.stringify({

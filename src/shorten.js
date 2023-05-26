@@ -15,7 +15,7 @@ function Shortening(){
         if(inputValue === ''){
             alert('Please Enter a Link')
         }else{
-            const getFetch = await fetch('http://localhost:3000/shorten', {
+            const getFetch = await fetch('https://shortit-etr8.onrender.com/shorten', {
                 method: 'post',
                 headers: {'content-type': 'application/json'},
                 body: JSON.stringify({

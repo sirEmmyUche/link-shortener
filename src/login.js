@@ -20,7 +20,7 @@ function LogIn({homepage, signUpPage}){
 
 const sendToAPI = async()=>{
         //dont delete this code......
-   const loginUser = await fetch('http://localhost:3000/login', {
+   const loginUser = await fetch('https://shortit-etr8.onrender.com/login', {
       method: 'post',
       headers: {'content-type':'application/json'},
       body: JSON.stringify({
