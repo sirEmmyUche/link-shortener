@@ -11,6 +11,7 @@ section{
 
 .box{
     width: 50%;
+    border: 1px solid transparent;
 }
 
 .img-box{
@@ -52,18 +53,19 @@ p{
     }
 
     .img-box{
-        width: 50%;
+        width: 100%;
         grid-column: 1;
         grid-row: 1;
     }
     .box{
         grid-column: 1;
         grid-row: 2; 
+        width: 100%;
     }
     h1,p{
         width: 100%;
     }
     .sec-btn>button{
-        width: 50%;
+        width: 100%;
     }
 }

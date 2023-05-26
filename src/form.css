@@ -1,8 +1,8 @@
 .form-data {
-    background-color: rgba(100, 46, 172, 0.822);
+    background: rgba(100, 46, 172, 0.822);
     border: 1px solid hsl(240, 33%, 85%);
     box-shadow: -webkit-box-shadow 0 0 10px rgb(20, 13, 13);
-    box-shadow: 0 0 10px #fff;
+    box-shadow: 0 0 10px #ffff;
     padding: 2rem;
     width: 50%;
     position: relative;
@@ -31,6 +31,11 @@
 
 
 @media screen and (max-width:700px){
+    .form-data{
+        height: 100%;
+        width: 100%;
+    }
+
     .login-submit-btn{
         width: 100%;
     }

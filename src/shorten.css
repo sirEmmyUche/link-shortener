@@ -17,7 +17,7 @@ input{
 .short-background{
     background-position: center;
     background-size: 100% 100%;
-    border: 1px solid red;
+    border: 1px solid transparent;
     width: 100%;
     margin-bottom: 10px;
     height: 50px;
@@ -53,4 +53,10 @@ input{
     border: 1px solid hsl(180, 66%, 49%);
     color:hsl(0, 0%, 100%);
     margin-left: 10px;
+}
+
+@media screen and (max-width:700px) {
+    .short-background, .short-div{
+        width: 100%;
+    }
 }
