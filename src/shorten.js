@@ -71,7 +71,7 @@ function Shortening(){
 }, [inputValue])
 
     const copyToClipboard = ()=>{
-            navigator.clipboard.writeText(shortUrl);
+            navigator.clipboard.writeText(shortUrl.shortId);
                 setIsCopied(true);
     }
 
