@@ -14,17 +14,18 @@ function Nav ({homepage,signUpPage}){
 
     return(
      <nav className='main-nav'>
-            <div><Logo/></div> 
+            <div>
+                <Logo/>
+            </div> 
             <div className='phone-menu-bar' id = {menuBar? 'handleMenuBar' :'phone-menu-bar' } >
-                <div><NavFeautres/></div> 
-                <div className='nav-grp-btn'>
-                <button className='login-btn' onClick={homepage}>LogIn</button> 
-                <button className='signup-btn'onClick={signUpPage}>SignUp</button> 
+                <div>
+                    <NavFeautres/>
                 </div>  
             </div>
             <div className='img-menu'>
                 <img src='/images/icon-menu.svg' alt='logo'
-                 onClick={handleMenuBar}/></div>   
+                 onClick={handleMenuBar}/>
+            </div>   
      </nav>
     );
 }
