@@ -1,34 +1,55 @@
+#short-form{
+    border:1px solid transparent;
+    background-color:hsl(257, 7%, 90%);
+    width: 100%;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items:center;
+}
+
+.short-background{
+    border: 1px solid transparent;
+    width: 70%;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+label{
+    border: 1px solid transparent;
+    padding: 5px;
+    width:80%;
+}
+
+.shorten-btn-box{
+    border: 1px solid transparent;
+    padding: 10px;
+}
+
 
 input{
     width: 100%;
     padding:20px;
 }
 
-.short-background{
-    background-position: center;
-    background-size: 100% 100%;
-    border: 1px solid transparent;
-    width: 100%;
-    margin-bottom: 10px;
-    height: 50px;
-    padding: 10px;
+.display--shortend--link{
+    width:80%;
+    height: 45px;
+    padding: 2px;
+    border: 1px solid hsl(257, 27%, 26%);
+    background-color: hsl(0, 0%, 100%);
+    font-size: 16px;
+    color: hsl(257, 27%, 26%);
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
 }
 
-#short-form{
-    border:1px solid transparent;
-    background-color:hsl(257, 7%, 90%);
-    width: 100%;
-    height:35vh;
-    display: flex;
-    justify-content: center;
-    align-items:center;
-}
-
-.short-div{
-    border: 1px solid outset;
-    width: 50%;
+.hide-copy{
+    display: none;
 }
 
 .btn--short--it,.btn--copy{
@@ -39,7 +60,6 @@ input{
     border-radius:5px;
     color:hsl(0, 0%, 100%);
     font-size:20px;
-    margin-left: 10px;
     cursor:pointer;
 }
 .btn--short--it:disabled,
@@ -51,30 +71,10 @@ button[disabled]{
 .feedback{
     color:red;
 }
-#shortend-link{
-    border:1px solid transparent;
-    padding:10px;
-    width: 100%;
-    height: 50px;
-    margin-top:30px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    /* display:none; */
-}
 
-.display--shortend--link{
-    width: 100%;
-    height: 45px;
-    padding: 2px;
-    border: 1px solid hsl(0, 0%, 100%);
-    background-color: hsl(0, 0%, 100%);
-    font-size: 15px;
-    color: hsl(257, 27%, 26%);
-}
 
 @media screen and (max-width:700px) {
-    .short-background, .short-div{
+    .short-background{
         width: 100%;
     }
 }

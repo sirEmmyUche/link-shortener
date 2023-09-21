@@ -38,8 +38,8 @@ function Shortening(){
                     setFeedback("Please Provide a valid URL")
                 }else{
                     setIsSubmitting(true);
-                     const res = await fetch('http://localhost:3000/shorten', {
-                        //https://shortit-etr8.onrender.com/shorten
+                     const res = await fetch('https://shortit-etr8.onrender.com/shorten', {
+                        // http://localhost:3000/shorten
                      method: 'post',
                      headers: {'content-type': 'application/json'},
                      body: JSON.stringify({
@@ -47,18 +47,24 @@ function Shortening(){
                      })       
                  })
                  const data = await res.json(); 
-                 console.log(data);
                  if(!data){
-                    setFeedback("Unable to show result at the moment");
+                    setFeedback("Unable to shorten URL at the moment");
                     setIsSubmitting(false);
                  }
-                
-                 setShortUrl(data.shortLink);
+                 if(data.status!==200){
+                    setIsSubmitting(false);
+                    setFeedback("Temporary server error, unable to shorten link");
+                 }
+                 if(data.status===200){
+                    setIsSubmitting(false);
+                    setShortUrl(data);
+                 }
                 }
              }
                 
         }catch(err){
-            console.log(err)
+            //console.log(err)
+            setFeedback("Internal Server Error, Please try again later")
         }
     };
     fetchData();
@@ -66,26 +72,32 @@ function Shortening(){
 
     const copyToClipboard = ()=>{
             navigator.clipboard.writeText(shortUrl);
-            setIsCopied(true)
+                setIsCopied(true);
     }
 
     return(
         <div id="short-form">
-            <div className="short-div">
                 <div className="short-background">
-                    <input type={'url'}
-                    placeholder='Shorten a link here...'
-                    onChange={handleOnchange}/>
-                    <button disabled={isSubmitting}
-                    className="btn--short--it" onClick={handleOnSubmit}>{!isSubmitting?"Shorten it!":"Loading..."}</button>
+                    <label>
+                        <input type={'url'}
+                        placeholder='Shorten a link here...'
+                        onChange={handleOnchange}/>
+                    </label>
+                    <div className="shorten-btn-box">
+                        <button disabled={isSubmitting}
+                            className="btn--short--it" onClick={handleOnSubmit}>{!isSubmitting?"Shorten it!":"Loading..."}
+                        </button>
+                    </div>
                 </div>
                 <p className="feedback">{feedback}</p>
-                <div id="shortend-link">
-                    <div className="display--shortend--link">{shortUrl}</div>
-                    <button className="btn--copy" onClick={copyToClipboard}>{isCopied?"Copied":"Copy"}</button>
+                <div className={shortUrl.shortId?"short-background":"hide-copy"}>
+                    <div className="display--shortend--link">{shortUrl.shortId}</div>
+                    <div className="shorten-btn-box">
+                        <button className="btn--copy" onClick={copyToClipboard}>
+                            {isCopied?"Copied":"Copy"}
+                        </button>
+                    </div>
                 </div>
-                
-            </div>
         </div>
     )
 }
