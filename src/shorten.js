@@ -46,18 +46,14 @@ function Shortening(){
                              longUrl: inputValue 
                      })       
                  })
-                 const data = await res.json(); 
-                 if(!data){
-                    setFeedback("Unable to shorten URL at the moment");
-                    setIsSubmitting(false);
-                 }
-                 if(data.status!==200){
+                  if(!res.ok){
                     setIsSubmitting(false);
                     setFeedback("Temporary server error, unable to shorten link");
                  }
-                 if(data.status===200){
+                 if(res.ok){
+                    const data = await res.json(); 
                     setIsSubmitting(false);
-                    setShortUrl(data);
+                     setShortUrl(data);
                  }
                 }
              }
