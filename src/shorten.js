@@ -51,7 +51,7 @@ function Shortening(){
                     setFeedback("Temporary server error, unable to shorten link");
                  }
                  if(res.ok){
-                    const data = await res.json(); 
+                    const data = await res.json();
                     setIsSubmitting(false);
                      setShortUrl(data);
                  }
@@ -86,7 +86,7 @@ function Shortening(){
                     </div>
                 </div>
                 <p className="feedback">{feedback}</p>
-                <div className={shortUrl.shortId?"short-background":"hide-copy"}>
+                <div className={shortUrl.shortUrl?"short-background":"hide-copy"}>
                     <div className="display--shortend--link">{shortUrl.shortUrl}</div>
                     <div className="shorten-btn-box">
                         <button className="btn--copy" onClick={copyToClipboard}>
