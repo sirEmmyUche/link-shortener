@@ -87,7 +87,7 @@ function Shortening(){
                 </div>
                 <p className="feedback">{feedback}</p>
                 <div className={shortUrl.shortId?"short-background":"hide-copy"}>
-                    <div className="display--shortend--link">{shortUrl.shortId}</div>
+                    <div className="display--shortend--link">{shortUrl.shortUrl}</div>
                     <div className="shorten-btn-box">
                         <button className="btn--copy" onClick={copyToClipboard}>
                             {isCopied?"Copied":"Copy"}
